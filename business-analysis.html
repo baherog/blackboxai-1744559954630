@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Analysis - Innovia Integrated Solutions</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#1e40af',
+                        secondary: '#1d4ed8',
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .heading {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md fixed w-full z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-primary heading">
+                    <a href="/">innoviais</a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="/" class="text-gray-800 hover:text-primary transition">Home</a>
+                    <a href="/about.html" class="text-gray-800 hover:text-primary transition">About</a>
+                    <div class="relative group">
+                        <button class="text-primary font-semibold">Services</button>
+                        <div class="absolute hidden group-hover:block w-48 bg-white shadow-lg mt-2 py-2 rounded-lg">
+                            <a href="/business-analysis.html" class="block px-4 py-2 text-primary bg-gray-100">Business Analysis</a>
+                            <a href="/business-applications.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Business Applications</a>
+                            <a href="/business-integration.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Business Integration</a>
+                            <a href="/business-outsourcing.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Business Outsourcing</a>
+                            <a href="/business-training.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Business Training</a>
+                        </div>
+                    </div>
+                    <a href="/#testimonials" class="text-gray-800 hover:text-primary transition">Testimonials</a>
+                    <a href="/contact.html" class="text-gray-800 hover:text-primary transition">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-gray-800" id="mobile-menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="hidden md:hidden" id="mobile-menu">
+                <div class="flex flex-col space-y-4 mt-4 pb-4">
+                    <a href="/" class="text-gray-800 hover:text-primary transition">Home</a>
+                    <a href="/about.html" class="text-gray-800 hover:text-primary transition">About</a>
+                    <button class="text-left text-primary font-semibold" id="mobile-services-button">
+                        Services <i class="fas fa-chevron-down ml-2"></i>
+                    </button>
+                    <div class="pl-4 space-y-2" id="mobile-services-menu">
+                        <a href="/business-analysis.html" class="block text-primary font-semibold">Business Analysis</a>
+                        <a href="/business-applications.html" class="block text-gray-800 hover:text-primary">Business Applications</a>
+                        <a href="/business-integration.html" class="block text-gray-800 hover:text-primary">Business Integration</a>
+                        <a href="/business-outsourcing.html" class="block text-gray-800 hover:text-primary">Business Outsourcing</a>
+                        <a href="/business-training.html" class="block text-gray-800 hover:text-primary">Business Training</a>
+                    </div>
+                    <a href="/#testimonials" class="text-gray-800 hover:text-primary transition">Testimonials</a>
+                    <a href="/contact.html" class="text-gray-800 hover:text-primary transition">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-12 bg-gradient-to-r from-blue-900 to-blue-700 text-white">
+        <div class="container mx-auto px-4 py-16">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 heading">Business Analysis</h1>
+                <p class="text-xl md:text-2xl mb-8">Identifying business needs and determining solutions to business problems</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://images.pexels.com/photos/7681091/pexels-photo-7681091.jpeg" alt="Business Analysis" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold mb-6 heading">What We Offer</h2>
+                    <p class="text-gray-600 mb-6">
+                        At Innovia Integrated Solutions, we specialize in comprehensive business analysis services that help organizations identify their needs and develop effective solutions to complex business problems. Our approach combines industry expertise with cutting-edge methodologies to deliver actionable insights and sustainable results.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-primary text-xl mt-1"></i>
+                            <p class="ml-4 text-gray-600">Requirements gathering and documentation</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-primary text-xl mt-1"></i>
+                            <p class="ml-4 text-gray-600">Process analysis and improvement recommendations</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-primary text-xl mt-1"></i>
+                            <p class="ml-4 text-gray-600">Stakeholder analysis and management</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-primary text-xl mt-1"></i>
+                            <p class="ml-4 text-gray-600">Solution assessment and validation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 heading">Our Analysis Process</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 heading">Discovery & Research</h3>
+                    <p class="text-gray-600">
+                        We begin by thoroughly understanding your business context, challenges, and objectives through comprehensive research and stakeholder interviews.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 heading">Analysis & Planning</h3>
+                    <p class="text-gray-600">
+                        Our team analyzes the gathered information to identify patterns, opportunities, and potential solutions that align with your business goals.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 heading">Solution Design</h3>
+                    <p class="text-gray-600">
+                        We develop detailed solutions and recommendations, including process improvements, technology solutions, and organizational changes.
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 heading">Implementation Planning</h3>
+                    <p class="text-gray-600">
+                        We create comprehensive implementation plans that consider resource requirements, timelines, and potential risks.
+                    </p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 heading">Stakeholder Management</h3>
+                    <p class="text-gray-600">
+                        We ensure all stakeholders are aligned and engaged throughout the process, facilitating smooth implementation of solutions.
+                    </p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 heading">Monitoring & Optimization</h3>
+                    <p class="text-gray-600">
+                        We track the implementation progress and results, making adjustments as needed to ensure optimal outcomes.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-white mb-8 heading">Ready to Transform Your Business?</h2>
+            <p class="text-xl text-white mb-8">
+                Let us help you identify opportunities and solve complex business challenges.
+            </p>
+            <a href="/contact.html" class="inline-block bg-white text-primary px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">
+                Contact Us Today
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 heading">About Us</h3>
+                    <p class="text-gray-400">
+                        Innovia Integrated Solutions provides comprehensive business solutions to help companies achieve their goals.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 heading">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="/about.html" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="/contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 heading">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/business-analysis.html" class="text-gray-400 hover:text-white transition">Business Analysis</a></li>
+                        <li><a href="/business-applications.html" class="text-gray-400 hover:text-white transition">Business Applications</a></li>
+                        <li><a href="/business-integration.html" class="text-gray-400 hover:text-white transition">Business Integration</a></li>
+                        <li><a href="/business-outsourcing.html" class="text-gray-400 hover:text-white transition">Business Outsourcing</a></li>
+                        <li><a href="/business-training.html" class="text-gray-400 hover:text-white transition">Business Training</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 heading">Contact Info</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> Metropolitan Cairo, Egypt</li>
+                        <li><i class="fas fa-phone mr-2"></i> Contact us for details</li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@innoviais.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Innovia Integrated Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileServicesButton = document.getElementById('mobile-services-button');
+        const mobileServicesMenu = document.getElementById('mobile-services-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileServicesButton.addEventListener('click', () => {
+            mobileServicesMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
