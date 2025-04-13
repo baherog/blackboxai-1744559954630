@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Innovia Integrated Solutions</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#1e40af',
+                        secondary: '#1d4ed8',
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .heading {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md fixed w-full z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-primary heading">
+                    <a href="/">innoviais</a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="/" class="text-gray-800 hover:text-primary transition">Home</a>
+                    <a href="/about.html" class="text-gray-800 hover:text-primary transition">About</a>
+                    <div class="relative group">
+                        <button class="text-gray-800 hover:text-primary transition">Services</button>
+                        <div class="absolute hidden group-hover:block w-48 bg-white shadow-lg mt-2 py-2 rounded-lg">
+                            <a href="/business-analysis.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Business Analysis</a>
+                            <a href="/business-applications.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Business Applications</a>
+                            <a href="/business-integration.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Business Integration</a>
+                            <a href="/business-outsourcing.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Business Outsourcing</a>
+                            <a href="/business-training.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Business Training</a>
+                        </div>
+                    </div>
+                    <a href="/#testimonials" class="text-gray-800 hover:text-primary transition">Testimonials</a>
+                    <a href="/contact.html" class="text-primary font-semibold">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-gray-800" id="mobile-menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="hidden md:hidden" id="mobile-menu">
+                <div class="flex flex-col space-y-4 mt-4 pb-4">
+                    <a href="/" class="text-gray-800 hover:text-primary transition">Home</a>
+                    <a href="/about.html" class="text-gray-800 hover:text-primary transition">About</a>
+                    <button class="text-left text-gray-800 hover:text-primary transition" id="mobile-services-button">
+                        Services <i class="fas fa-chevron-down ml-2"></i>
+                    </button>
+                    <div class="hidden pl-4 space-y-2" id="mobile-services-menu">
+                        <a href="/business-analysis.html" class="block text-gray-800 hover:text-primary">Business Analysis</a>
+                        <a href="/business-applications.html" class="block text-gray-800 hover:text-primary">Business Applications</a>
+                        <a href="/business-integration.html" class="block text-gray-800 hover:text-primary">Business Integration</a>
+                        <a href="/business-outsourcing.html" class="block text-gray-800 hover:text-primary">Business Outsourcing</a>
+                        <a href="/business-training.html" class="block text-gray-800 hover:text-primary">Business Training</a>
+                    </div>
+                    <a href="/#testimonials" class="text-gray-800 hover:text-primary transition">Testimonials</a>
+                    <a href="/contact.html" class="text-primary font-semibold">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-12 bg-gradient-to-r from-blue-900 to-blue-700 text-white">
+        <div class="container mx-auto px-4 py-16">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 heading">Contact Us</h1>
+                <p class="text-xl md:text-2xl mb-8">Get in touch with our team</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-bold mb-6 heading">Send us a message</h2>
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Full Name *</label>
+                            <input type="text" id="name" name="name" required
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                                placeholder="Enter your full name">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email Address *</label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                                placeholder="Enter your email address">
+                        </div>
+
+                        <div>
+                            <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                            <input type="tel" id="phone" name="phone"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                                placeholder="Enter your phone number">
+                        </div>
+
+                        <div>
+                            <label for="subject" class="block text-gray-700 font-medium mb-2">Subject *</label>
+                            <input type="text" id="subject" name="subject" required
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                                placeholder="Enter message subject">
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Message *</label>
+                            <textarea id="message" name="message" rows="5" required
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                                placeholder="Enter your message"></textarea>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full bg-primary text-white py-3 px-6 rounded-lg hover:bg-secondary transition duration-300 font-semibold">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="space-y-8">
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <h2 class="text-2xl font-bold mb-6 heading">Contact Information</h2>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="text-primary text-xl mt-1">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="font-semibold text-lg">Address</h3>
+                                    <p class="text-gray-600">Metropolitan Cairo, Egypt</p>
+                                    <p class="text-gray-600">Additional Branch in Dubai, UAE</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="text-primary text-xl mt-1">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="font-semibold text-lg">Phone</h3>
+                                    <p class="text-gray-600">Contact us for details</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="text-primary text-xl mt-1">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="font-semibold text-lg">Email</h3>
+                                    <p class="text-gray-600">info@innoviais.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Business Hours -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <h2 class="text-2xl font-bold mb-6 heading">Business Hours</h2>
+                        <div class="space-y-2">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Monday - Friday</span>
+                                <span class="font-semibold">9:00 AM - 6:00 PM</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Saturday</span>
+                                <span class="font-semibold">10:00 AM - 4:00 PM</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Sunday</span>
+                                <span class="font-semibold">Closed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 heading">About Us</h3>
+                    <p class="text-gray-400">
+                        Innovia Integrated Solutions provides comprehensive business solutions to help companies achieve their goals.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 heading">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="/about.html" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="/contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 heading">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/business-analysis.html" class="text-gray-400 hover:text-white transition">Business Analysis</a></li>
+                        <li><a href="/business-applications.html" class="text-gray-400 hover:text-white transition">Business Applications</a></li>
+                        <li><a href="/business-integration.html" class="text-gray-400 hover:text-white transition">Business Integration</a></li>
+                        <li><a href="/business-outsourcing.html" class="text-gray-400 hover:text-white transition">Business Outsourcing</a></li>
+                        <li><a href="/business-training.html" class="text-gray-400 hover:text-white transition">Business Training</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 heading">Contact Info</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> Metropolitan Cairo, Egypt</li>
+                        <li><i class="fas fa-phone mr-2"></i> Contact us for details</li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@innoviais.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Innovia Integrated Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu and Form Validation -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileServicesButton = document.getElementById('mobile-services-button');
+        const mobileServicesMenu = document.getElementById('mobile-services-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileServicesButton.addEventListener('click', () => {
+            mobileServicesMenu.classList.toggle('hidden');
+        });
+
+        // Form validation and submission
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Basic form validation
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            if (!name || !email || !subject || !message) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+
+            // Here you would typically send the form data to a server
+            alert('Thank you for your message. We will get back to you soon!');
+            contactForm.reset();
+        });
+    </script>
+</body>
+</html>
